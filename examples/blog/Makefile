@@ -31,6 +31,7 @@ http:
            --proto_path=$(KRATOS)/third_party \
            --go_out=paths=source_relative:. \
            --go-http_out=paths=source_relative:. \
+           --go-swagger_out=paths=source_relative:. \
            $(API_PROTO_FILES)
 
 .PHONY: errors
