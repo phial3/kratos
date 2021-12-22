@@ -28,7 +28,7 @@ grpc:
 # generate http code
 http:
 	protoc --proto_path=. \
-           --proto_path=$(KRATOS)/third_party \
+           --proto_path=./third_party \
            --go_out=paths=source_relative:. \
            --go-http_out=paths=source_relative:. \
            --go-swagger_out=paths=source_relative:. \

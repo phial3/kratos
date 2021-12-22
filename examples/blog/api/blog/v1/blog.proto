@@ -1,31 +1,35 @@
 syntax = "proto3";
 
+// sadasd
 package blog.api.v1;
 
 option go_package = "github.com/go-kratos/kratos/examples/blog/api/v1;v1";
 option java_multiple_files = true;
 option java_package = "blog.api.v1";
-
 import "google/api/annotations.proto";
 // the validate rules:
 // https://github.com/envoyproxy/protoc-gen-validate
 import "validate/validate.proto";
+//asdsdasd
 
-// nihao
+// nihaoß
 // 111
 // 222
 // 333
+//@Server=https://petstore.swagger.io/v2 || https://petstore.swagger.io/v2
 service BlogService {
     // nihao
     // 111
     // 222
-    // 333
+    // @tag=foo,bar
+    // @description=Pet object that needs to be added to the store
     rpc CreateArticle (CreateArticleRequest) returns (CreateArticleReply) {
         option (google.api.http) = {
             post: "/v1/article/"
             body: "*"
         };
     }
+    // @type=application/json
     rpc UpdateArticle (UpdateArticleRequest) returns (UpdateArticleReply) {
         option (google.api.http) = {
             put: "/v1/article/{id}"
@@ -65,7 +69,13 @@ message CreateArticleReply {
     Article Article = 1;
 }
 
+//@media=application/json2
+
+//@media=application/json2
+
+//@media=application/json2
 message UpdateArticleRequest {
+    //@type=application/json1
     int64 id = 1 [(validate.rules).int64 = {gt: 0}];
     string title = 2 [(validate.rules).string = {min_len: 5, max_len: 50}]; // the title of string must be between 5 and 50 character;
     string content = 3;

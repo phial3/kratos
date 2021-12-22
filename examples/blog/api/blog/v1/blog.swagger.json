@@ -1,0 +1,1 @@
+{"openapi":"3.0.0","title":"blog.api.v1","server":null,"contact":{},"paths":{"/v1/article/":{"get":{"Tags":[]},"post":{"Tags":[]}},"/v1/article/{id}":{"delete":{"Tags":[]},"get":{"Tags":[]},"put":{"Tags":[]}}}}
